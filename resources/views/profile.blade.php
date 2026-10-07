@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile</title>
-</head>
-<body>
+@extends('layouts.main')
 
-    <!-- Tambahkan kode navigasi ini -->
-    <nav>
-        <a href="{{ url('/') }}">Home</a> | 
-        <a href="{{ url('/profile') }}">Profile</a> | 
-        <a href="{{ url('/contact') }}">Contact</a> | 
-        <a href="{{ url('/berita') }}">Berita</a>
-    </nav>
-    <hr>
+@section('title', 'Profile')
 
-    <!-- Kode lama kamu tetap ada di bawah sini -->
+@section('content')
     <h1>HALAMAN profile</h1>
-    <p>Nama : Faizal</p>
-    <p>NIM : 13242520020</p>
-    <p>Prodi : Teknologi Informasi</p>
-   <img src="{{ asset('images/zntsu.png') }}" alt="gambar" width="200px">
-
-</body>
-</html>
+    <p>Nama : {{ $name }}</p>
+    <p>NIM : {{ $nim }}</p>
+    <p>Prodi : {{ $prodi }}</p>
+    <img src="{{ asset('images/zntsu.png') }}" alt="gambar" width="200px">
+@endsection
